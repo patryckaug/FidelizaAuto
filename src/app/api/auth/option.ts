@@ -15,6 +15,7 @@ export const authOptions: NextAuthOptions = {
       return { ...session, user: token.user }
     },
   },
+  secret: process.env.NEXTAUTH_SECRET,
   providers: [
     CredentialsProvider({
       credentials: {
